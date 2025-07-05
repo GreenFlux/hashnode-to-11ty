@@ -3,21 +3,21 @@ title: "{{ post.title }}"
 date: {{ post.date }}
 permalink: "{{ post.permalink }}"
 layout: "{{ post.layout }}"
-{%- if post.excerpt %}
+{% if post.excerpt -%}
 excerpt: "{{ post.excerpt }}"
-{%- endif %}
-{%- if post.coverImage %}
+{% endif -%}
+{% if post.coverImage -%}
 coverImage: "{{ post.coverImage }}"
-{%- endif %}
-{%- if post.readTime %}
+{% endif -%}
+{% if post.readTime -%}
 readTime: {{ post.readTime }}
-{%- endif %}
-{%- if post.tags %}
+{% endif -%}
+{% if post.tags -%}
 tags: [{{ post.tags | map('tojson') | join(', ') }}]
-{%- endif %}
-{%- if post.series %}
+{% endif -%}
+{% if post.series -%}
 series: "{{ post.series }}"
-{%- endif %}
+{% endif -%}
 ---
 
 {{ post.content }}

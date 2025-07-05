@@ -115,7 +115,7 @@ class ContentTransformer:
         if has_template_syntax:
             # Check if content already has raw tags
             if '{% raw %}' not in content:
-                content = "{{% raw %}}\n" + content + "\n{{% endraw %}}"
+                content = "{% raw %}\n" + content + "\n{% endraw %}"
                 
         return content
         
